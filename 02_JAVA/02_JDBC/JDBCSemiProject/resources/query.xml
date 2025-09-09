@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="insertMember">
+		INSERT INTO MEMBER 
+		VALUES(
+			SEQ_USERNO.NEXTVAL, 
+			?, 
+			?,
+			?
+		)
+	</entry>
+	<entry key="insertScore">
+		INSERT INTO SCORE 
+		VALUES(
+			SEQ_SCORENO.NEXTVAL, 
+			?, 
+			?,
+			?,
+			?
+		)
+	</entry>
+	<entry key="selectIdList">
+		SELECT ID FROM MEMBER
+	</entry>
+	<entry key="selectMemberList">
+		SELECT * FROM MEMBER
+	</entry>
+	
+	<entry key="changePassword">
+		UPDATE MEMBER 
+		SET PWD=? 
+		WHERE ID=?
+	</entry>
+	<entry key="changeName">
+		UPDATE MEMBER 
+		SET NAME=? 
+		WHERE ID=?
+	</entry>
+	<entry key="getScoreToIdCode">
+		SELECT * FROM SCORE
+		WHERE USER_ID = ?
+		AND GAME_CODE = ?
+	</entry>
+	<entry key="getScoreToId">
+		SELECT * FROM SCORE
+		WHERE USER_ID = ?
+	</entry>
+	<entry key="getScore">
+		SELECT * FROM SCORE
+	</entry>
+	<entry key="updateScore">
+		UPDATE SCORE 
+		SET SCORE=? 
+		WHERE USER_ID=?
+		AND GAME_CODE=?
+	</entry>
+	<entry key="deleteMember">
+		DELETE FROM MEMBER 
+		WHERE ID=? 
+		  AND PWD=?
+	</entry>
+	<entry key="deleteScore">
+		DELETE FROM SCORE 
+		WHERE USER_ID=? 
+	</entry>
+	<entry key="bulkDeleteMembers">
+		DELETE FROM MEMBER 
+		WHERE USER_ID=? 
+	</entry>
+	<entry key="memberSearchByName">
+		SELECT * 
+		FROM MEMBER 
+		WHERE USER_NAME LIKE '%' || ? || '%'
+	</entry>
+</properties>

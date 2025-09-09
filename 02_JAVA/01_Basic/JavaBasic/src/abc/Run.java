@@ -1,0 +1,9 @@
+package abc;
+
+public class Run {
+
+	public static void main(String[] args) {
+		new C().print();
+	}
+
+}
