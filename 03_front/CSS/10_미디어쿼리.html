@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border:  1px solid black;
+            box-sizing: border-box;
+        }
+        body{
+            background: #e3f2fd;
+        }
+
+        #wrap{
+            width: 1200px; margin: 0 auto;
+        }
+        #header{
+            width: 100%; height: 100px; background: #b8dffd;
+        }
+        #banner{width: 100%; height: 400px; background: #8ad0ff;}
+        #content1 {flex-direction: row; gap: 0; }
+        #content1 .nav{flex: 0 0 30% ; height: 500px; background: #41708f;}
+        #content1 .right{
+            flex: 1 1 0;
+            background: #98cff3;
+        }
+        #content1 .right .article-right{
+            flex: 1 1 0;
+        }
+        /*
+        =======반응형========
+        화면넓이가 0 ~ 1200px일때 {}안에 스타일 적용
+        */
+        @media (max-width = 1200px){
+            
+        }
+    </style>
+</head>
+<body>
+    <!--
+        미디어쿼리란?(조건부 스타일)
+        CSS에서 화면의 크기 또는 방향등 디바이스의 트성에 따라 다른 스타일을 적용할 수 있도록 해주는 기능.
+        반응형 웹을 만들때 화면크기에 따라 요소들을 다르게 배치할 수 있다.
+    -->
+    <div id="wrap">
+        <header id="header"></header>
+        <section id="banner">
+        <section id="content1"></section>
+            <nav class="nav"></nav>
+            <div class="right">            
+            <article class="article-right1"></article>
+            <article class="article-right2"></article>
+        </div>
+
+        </section>
+        <section id="content2">
+            <article class="article-box1"></article>
+            <article class="article-box2"></article>
+            <article class="article-box3"></article>
+        </section>
+        <section id="content3">
+            <article class="article-squa"></article>
+            <article class="article-box2"></article>
+            <article class="article-box3"></article>
+        </section>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>

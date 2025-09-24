@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--외부 라이브러리-->
+    <!--구글폰트-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+    <!--내부 import-->
+    <link rel="stylesheet" href="./style.css">
+    <title>Household account book</title>
+</head>
+<body>
+    <!--컨테이너-->
+    <div class="container">
+        <!--헤더-->
+        <header>
+            <h1>가계부</h1>
+            <p>현재 잔액</p>
+            <span id="balance">100,000원</span>
+
+        </header>
+        <!--입력-->
+        <div class="amount-input">
+            <div class="tracking-buttons">
+                <button id="inputIncome" data-filter="income" class="active">수입</button>
+                <button id="inputExpenses" data-filter="expenses">지출</button>
+            </div>
+            <div>
+                <label >
+                    <p>내용</p>
+                    <input id="memo-input" type="text" placeholder="내용을 입력하세요. (예: 점심값, 월급 등)">
+                </label>
+                <label>
+                    <p>금액(₩)</p>
+                    <input id="amount-input" type="number" placeholder="금액을 입력하세요.">
+                </label>
+            </div>
+            <div>
+                <button id="balance-add-btn">추가하기</button>
+            </div>  
+        </div>
+        <div class="balance-bar">
+            <label>
+                <p>총 수입</p>
+                <p><span id="balance-plus">1,000,000원</span></p>
+            </label>
+            <label>
+                <p>총 지출</p>
+                <p><span id="balance-minus">1,000,000원</span></p>
+            </label>
+            <label>
+                <p>총 지출</p>
+                <p><span id="balance-total">1,000,000원</span></p>
+            </label>
+        </div>
+        <div class="filter-buttons">
+            <button data-filter="all" class="active">전체</button>
+            <button data-filter="income">수입</button>
+            <button data-filter="expenses">지출</button>
+        </div>
+        <ul id="balance-list" class="balance-list"></ul>
+    </div>
+    <!--스크립트-->
+    <script src="./script.js"></script>
+</body>
+</html>
